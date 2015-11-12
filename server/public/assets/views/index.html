@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/styles/style.css">
+
+    <!--SCRIPTS-->
+    <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/assets/scripts/app.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+    <h1>ZETA!</h1>
+    <div ng-controller="WelcomeController">
+        <button ng-click="order('name', false)">Order By Name</button>
+        <button ng-click="order('location', false)">Order By Location</button>
+        <button ng-click="order('favorite_number', false)">Order By Favorite Number</button>
+        <div ng-repeat="person in people">
+            <profile-info info="person"></profile-info>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
